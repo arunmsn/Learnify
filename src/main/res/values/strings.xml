@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LEARNIFY</string>
+    <string name="button_text">LOGIN BUTTON</string>
+    <string name="welcome">Welcome!</string>
+    <string name="name">NAME</string>
+    <string name="name_enter">Please enter your name</string>
+    <string name="start">START</string>
+    <string name="question_image">Question Image</string>
+    <string name="check_answer">Check Answer</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="username">Username</string>
+    <string name="finish">FINISH</string>
+    <string name="result">Result</string>
+    <string name="image">image</string>
+    <string name="hey_congratulations">Congratulations!</string>
+</resources>

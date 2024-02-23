@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ui.QuestionActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:gravity="center"
+            tools:text="MULTIPLE CHOICE" />
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:id="@+id/image_question"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/question_image"
+            tools:src="@drawable/learnifyq1"
+            android:gravity="center_horizontal" />
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="9">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:layout_marginEnd="10dp"
+
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="9"
+                android:minHeight="50dp"
+                android:indeterminate="false"
+                android:gravity="center"
+                tools:progress="6" />
+                <!--setting indeterminate to false b/c we do not want an infinite animation!-->
+            
+            <TextView
+                android:id="@+id/text_view_progress"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                tools:text="0/9"
+                android:textSize="25sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:background="@drawable/default_option_border_bg"
+            android:id="@+id/text_view_optionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 1"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"/>
+
+        <TextView
+            android:background="@drawable/default_option_border_bg"
+            android:id="@+id/text_view_optionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 2"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp" />
+
+        <TextView
+            android:background="@drawable/default_option_border_bg"
+            android:id="@+id/text_view_optionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 3"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp" />
+
+        <TextView
+            android:background="@drawable/default_option_border_bg"
+            android:id="@+id/text_view_optionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 4"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp" />
+
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/check_answer"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:minHeight="60dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
