@@ -160,7 +160,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private fun checkAnswer() {
         answered = true
         if (selectedAnswer == currentQuestion.correctAnswer) {
-            highlightAnswer(selectedAnswer)
+            highlightAnswer(selectedAnswer, currentQuestion.correctAnswer)
         } else {
             when(selectedAnswer) {
                 1 -> {
@@ -183,27 +183,61 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun showSolution() {
         selectedAnswer = currentQuestion.correctAnswer
-        highlightAnswer(selectedAnswer)
+        highlightAnswer(selectedAnswer, currentQuestion.correctAnswer)
     }
 
-    private fun highlightAnswer(answer:Int) {
-        when (answer) {
-            1 -> {
-                textViewOptionOne.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
-                score++
+    private fun highlightAnswer(answer:Int, correctAnswer:Int) {
+        if (answer == correctAnswer) {
+            // highlight the correct answer and increment score
+            when (answer) {
+                1 -> {
+                    textViewOptionOne.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                    score++ // use the global variable
+                }
+                2 -> {
+                    textViewOptionTwo.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                    score++ // use the global variable
+                }
+                3 -> {
+                    textViewOptionThree.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                    score++ // use the global variable
+                }
+                4 -> {
+                    textViewOptionFour.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                    score++ // use the global variable
+                }
             }
-            2 -> {
-                textViewOptionTwo.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
-                score++
+        } else {
+            // highlight the wrong answer and the correct answer
+            when (answer) {
+                1 -> {
+                    textViewOptionOne.background = ContextCompat.getDrawable(this, R.drawable.wrong_option_border_bg)
+                }
+                2 -> {
+                    textViewOptionTwo.background = ContextCompat.getDrawable(this, R.drawable.wrong_option_border_bg)
+                }
+                3 -> {
+                    textViewOptionThree.background = ContextCompat.getDrawable(this, R.drawable.wrong_option_border_bg)
+                }
+                4 -> {
+                    textViewOptionFour.background = ContextCompat.getDrawable(this, R.drawable.wrong_option_border_bg)
+                }
             }
-            3 -> {
-                textViewOptionThree.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
-                score++
-            }
-            4 -> {
-                textViewOptionFour.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
-                score++
+            when (correctAnswer) {
+                1 -> {
+                    textViewOptionOne.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                }
+                2 -> {
+                    textViewOptionTwo.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                }
+                3 -> {
+                    textViewOptionThree.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                }
+                4 -> {
+                    textViewOptionFour.background = ContextCompat.getDrawable(this, R.drawable.correct_option_border_bg)
+                }
             }
         }
     }
+
 }
