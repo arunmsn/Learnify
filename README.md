@@ -6,3 +6,6 @@ To read through the file, follow the order below:
 5) Return to main
 6) res
 7) explore drawable, layout, and values
+
+Source for my questions:
+https://thirdspacelearning.com/us/blog/algebra-questions/
